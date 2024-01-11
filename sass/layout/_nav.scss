@@ -1,0 +1,45 @@
+.navbar{
+    @media only screen and (min-width:755px){
+        margin:3rem auto;
+        max-width: 111rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__nav{
+
+        @media only screen and (min-width:755px){
+            width: 50%;
+            margin-right:0;
+            display: flex;
+        }
+       
+        
+    }
+    &__nav-list{
+        @media only screen and (min-width:755px){
+            list-style:none;
+            display: flex;
+            width:100%;
+            justify-content: space-between;
+        }
+       
+    }
+    &__nav-link{
+
+        @media only screen and (min-width:755px){
+            font-size:1.5rem;
+        text-decoration: none;
+        transition: all .3s;
+
+        &:link,&:visited{
+            color:$dark-blue;
+        }
+        &:hover{
+            color:$soft-red;
+        }
+        }   
+    }
+}
+
