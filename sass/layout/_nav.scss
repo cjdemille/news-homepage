@@ -1,4 +1,13 @@
 .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+   
+
+    // position: fixed;
+
+
     @media only screen and (min-width:755px) {
         margin: 3rem auto;
         max-width: 111rem;
@@ -11,12 +20,69 @@
         margin: 12rem auto 3rem;
     }
 
+    &__checkbox {
+        display: none;
+    }
+
+    &__toggle {
+        height: 4rem;
+        width: 4rem;
+        background-image: url(../assets/images/icon-menu.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        fill: currentColor;
+        z-index: 10;
+        transition: all .3s;
+
+        @media only screen and (min-width:755px) {
+            display: none;
+        }
+    }
+
+    &__checkbox:checked~&__toggle {
+        background-image: url(../assets/images/icon-menu-close.svg);
+        position: fixed;
+        right: 3rem;
+    }
+
+    &__checkbox:checked~&__nav {
+        position: fixed;
+        background-color: $off-white;
+        width: 75%;
+        top: 0;
+        text-align: left;
+        display: block;
+        z-index: 5;
+
+
+
+
+
+    }
+
+    &__checkbox:checked~&__nav-list {
+        &::before {}
+    }
+
     &__nav {
+        position: fixed;
+        right: 0;
+        height: 100svh;
+        width: 0;
+        padding: 30% 3rem;
+        transition: all .3s;
+        background-color: transparent;
+        color: transparent;
+
 
         @media only screen and (min-width:755px) {
             width: 50%;
+            height: auto;
             margin-right: 0;
             display: flex;
+            color: inherit;
+            position: relative;
+            padding: 0;
         }
 
 
@@ -25,8 +91,11 @@
     }
 
     &__nav-list {
+
+        list-style: none;
+
         @media only screen and (min-width:755px) {
-            list-style: none;
+
             display: flex;
             width: 100%;
             justify-content: space-between;
@@ -34,21 +103,31 @@
 
     }
 
+    &__nav-item {
+        margin-bottom: 3rem;
+    }
+
     &__nav-link {
+        text-decoration: none;
+        font-size: 1.8rem;
+        text-decoration: none;
+        transition: all .3s;
+
+        &:link,
+        &:visited {
+            color: $dark-blue;
+        }
+
+        &:hover {
+            color: $soft-red;
+        }
+
 
         @media only screen and (min-width:755px) {
             font-size: 1.5rem;
-            text-decoration: none;
-            transition: all .3s;
 
-            &:link,
-            &:visited {
-                color: $dark-blue;
-            }
 
-            &:hover {
-                color: $soft-red;
-            }
+
         }
     }
 }
