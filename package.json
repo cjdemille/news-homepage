@@ -4,12 +4,19 @@
   "description": "![Design preview for the News homepage coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
   "scripts": {
-    "sass-dev": "sass --watch --update --style=expanded sass/main.scss:css/dev.css"
+    "sass-dev": "sass --watch --update --style=expanded sass/main.scss:css/dev.css",
+    "sass-prod": "sass --no-source-map --style=compressed sass/main.scss:css/style.css",
+    "prefix-css": "postcss --use autoprefixer -b 'last 10 versions' css/style.css -o css/style.prefix.css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "sass": "^1.69.7"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.33",
+    "postcss-cli": "^11.0.0"
   }
 }

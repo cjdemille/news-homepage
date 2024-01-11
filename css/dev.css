@@ -62,12 +62,15 @@ html {
   align-items: center;
 }
 .story__img {
-  width: 30%;
-  height: auto;
+  width: 25%;
+}
+@media only screen and (min-width: 755px) {
+  .story__img {
+    width: 30%;
+  }
 }
 .story__content {
   margin-left: 3rem;
-  align-self: stretch;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -77,14 +80,13 @@ html {
   font-size: 3.2rem;
   font-weight: 700;
   color: hsl(233, 8%, 79%);
-  margin-bottom: 2rem;
 }
 .story__title {
   font-size: 1.8rem;
   line-height: 2.4rem;
   font-weight: 800;
   color: hsl(240, 100%, 5%);
-  margin: 2rem 0;
+  margin: 0.5rem 0;
   transition: all 0.3s;
 }
 .story__title:hover {
@@ -109,19 +111,51 @@ html {
 
 .hero {
   width: 100%;
+  max-width: 111rem;
+  margin: 3rem auto;
+}
+@media only screen and (min-width: 755px) {
+  .hero {
+    display: flex;
+    margin: 0 auto;
+  }
 }
 .hero__main {
   width: 100%;
   margin-bottom: 6rem;
 }
+@media only screen and (min-width: 755px) {
+  .hero__main {
+    flex: 1;
+    margin-right: 3rem;
+  }
+}
 .hero__main-img {
   width: 100%;
+}
+@media only screen and (min-width: 755px) {
+  .hero__main-content {
+    display: flex;
+    margin-top: 2rem;
+  }
 }
 .hero__main-heading {
   font-weight: 800;
   font-size: 4rem;
   color: hsl(240, 100%, 5%);
   margin: 2rem 0;
+}
+@media only screen and (min-width: 755px) {
+  .hero__main-heading {
+    margin-top: 0;
+  }
+}
+@media only screen and (min-width: 755px) {
+  .hero__main-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
 }
 .hero__main-text {
   font-size: 1.5rem;
@@ -133,11 +167,24 @@ html {
   background-color: hsl(240, 100%, 5%);
   padding: 2rem;
 }
+@media only screen and (min-width: 755px) {
+  .hero__new-stories {
+    flex: 0 0 30%;
+  }
+}
 
 .section-header {
   font-size: 3.2rem;
   font-weight: 700;
   color: hsl(35, 77%, 62%);
+}
+
+@media only screen and (min-width: 1053px) {
+  .more-stories {
+    display: flex;
+    max-width: 111rem;
+    margin: 3rem auto;
+  }
 }
 
 @media only screen and (min-width: 755px) {
@@ -147,6 +194,11 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+}
+@media only screen and (min-width: 1053px) {
+  .navbar {
+    margin: 12rem auto 3rem;
   }
 }
 @media only screen and (min-width: 755px) {

@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="css/dev.css">
-  
+  <link rel="stylesheet" href="css/style.prefix.css">
+
   <title>Frontend Mentor | News homepage</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
   <div class="navbar">
     <img src="assets/images/logo.svg" alt="logo" class="navbar__logo">
@@ -42,12 +40,19 @@
   <main>
     <section class="hero">
       <section class="hero__main">
-        <img src="assets/images/image-web-3-mobile.jpg" alt="Web 3.0 graphic" class="hero__main-img">
+
+        <picture class="hero__main-img" alt="web 3.0 graphic">
+          <source media="(min-width:755px)" srcset="assets/images/image-web-3-desktop.jpg" class="hero__main-img">
+          <img srcset="assets/images/image-web-3-mobile.jpg" class="hero__main-img">
+        </picture>
+
+
         <div class="hero__main-content">
           <h3 class="hero__main-heading">The Bright Future of Web 3.0?</h3>
           <div class="hero__main-preview">
             <p class="hero__main-text">
-              We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+              We dive into the next evolution of the web that claims to put the power of the platforms back into the
+              hands of the people.
               But is it really fulfilling its promise?
             </p>
             <a href="#" class="btn">Read more</a>
@@ -110,8 +115,9 @@
     </section>
   </main>
   <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="https://www.cjdemille.io" target="_blank">C.J. DeMille</a>.
   </footer>
 </body>
+
 </html>
